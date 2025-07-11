@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/armanpc/codes/GUIpro/main.cpp" "CMakeFiles/cal.dir/main.cpp.o" "gcc" "CMakeFiles/cal.dir/main.cpp.o.d"
+  "/home/armanpc/codes/GUIpro/main.c" "CMakeFiles/cal.dir/main.c.o" "gcc" "CMakeFiles/cal.dir/main.c.o.d"
   "" "cal" "gcc" "CMakeFiles/cal.dir/link.d"
   )
 
