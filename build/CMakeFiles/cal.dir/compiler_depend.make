@@ -5,9 +5,9 @@ CMakeFiles/cal.dir/main.c.o: /home/armanpc/codes/GUIpro/main.c \
   /home/armanpc/codes/GUIpro/nuklear.h \
   /home/armanpc/codes/GUIpro/nuklear_glfw_gl3.h \
   /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
+  /usr/include/GL/glew.h \
+  /usr/include/GL/glu.h \
   /usr/include/GLFW/glfw3.h \
-  /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
   /usr/include/assert.h \
   /usr/include/endian.h \
@@ -94,13 +94,15 @@ CMakeFiles/cal.dir/main.c.o: /home/armanpc/codes/GUIpro/main.c \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
-cal: /lib/i386-linux-gnu/libGLdispatch.so.0 \
+cal: /lib/i386-linux-gnu/libGL.so.1 \
+  /lib/i386-linux-gnu/libGLdispatch.so.0 \
   /lib/i386-linux-gnu/libX11.so.6 \
   /lib/i386-linux-gnu/libXau.so.6 \
   /lib/i386-linux-gnu/libXdmcp.so.6 \
   /lib/i386-linux-gnu/libbsd.so.0 \
   /lib/i386-linux-gnu/libmd.so.0 \
   /lib/i386-linux-gnu/libxcb.so.1 \
+  /lib/x86_64-linux-gnu/libGL.so.1 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib/x86_64-linux-gnu/libXau.so.6 \
@@ -115,6 +117,7 @@ cal: /lib/i386-linux-gnu/libGLdispatch.so.0 \
   /usr/lib/x86_64-linux-gnu/Scrt1.o \
   /usr/lib/x86_64-linux-gnu/crti.o \
   /usr/lib/x86_64-linux-gnu/crtn.o \
+  /usr/lib/x86_64-linux-gnu/libGLEW.so \
   /usr/lib/x86_64-linux-gnu/libc.so \
   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1 \
   /usr/lib/x86_64-linux-gnu/libm.so \
@@ -122,6 +125,7 @@ cal: /lib/i386-linux-gnu/libGLdispatch.so.0 \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so \
+  /usr/lib/i386-linux-gnu/libGL.so.1 \
   /usr/lib/i386-linux-gnu/libGLdispatch.so.0 \
   /usr/lib/i386-linux-gnu/libX11.so.6 \
   /usr/lib/i386-linux-gnu/libXau.so.6 \
@@ -144,9 +148,9 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/lib/i386-linux-gnu/libGLdispatch.so.0:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
+/usr/lib/i386-linux-gnu/libGL.so.1:
 
-/usr/lib/x86_64-linux-gnu/libm.so:
+/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 /usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
 
@@ -166,6 +170,10 @@ CMakeFiles/cal.dir/main.c.o:
 
 /lib/x86_64-linux-gnu/libGLdispatch.so.0:
 
+/usr/lib/x86_64-linux-gnu/libm.so:
+
+/lib/x86_64-linux-gnu/libGL.so.1:
+
 /lib/i386-linux-gnu/libxcb.so.1:
 
 /lib/i386-linux-gnu/libbsd.so.0:
@@ -173,6 +181,8 @@ CMakeFiles/cal.dir/main.c.o:
 /lib/i386-linux-gnu/libXdmcp.so.6:
 
 /lib/i386-linux-gnu/libX11.so.6:
+
+/lib/i386-linux-gnu/libGL.so.1:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
@@ -198,6 +208,8 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -205,10 +217,6 @@ CMakeFiles/cal.dir/main.c.o:
 /lib/x86_64-linux-gnu/libXdmcp.so.6:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
-
-/lib/i386-linux-gnu/libGLdispatch.so.0:
-
-/usr/include/time.h:
 
 /lib/x86_64-linux-gnu/libmvec.so.1:
 
@@ -224,45 +232,29 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/lib/x86_64-linux-gnu/crtn.o:
-
-/usr/include/stdlib.h:
-
 /usr/include/stdint.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so:
-
-/usr/include/math.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+/usr/lib/x86_64-linux-gnu/crtn.o:
 
-/usr/include/KHR/khrplatform.h:
+/usr/include/stdlib.h:
+
+/lib/i386-linux-gnu/libGLdispatch.so.0:
+
+/usr/include/time.h:
+
+/usr/include/GL/glew.h:
 
 /usr/include/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/home/armanpc/codes/GUIpro/main.c:
-
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -276,6 +268,18 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
+/home/armanpc/codes/GUIpro/main.c:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
 /usr/include/features-time64.h:
 
 /home/armanpc/codes/GUIpro/nuklear_glfw_gl3.h:
@@ -287,6 +291,14 @@ CMakeFiles/cal.dir/main.c.o:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /home/armanpc/codes/GUIpro/nuklear.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so:
+
+/usr/include/math.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
@@ -314,6 +326,8 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
+/usr/lib/x86_64-linux-gnu/libGLEW.so:
+
 /usr/include/limits.h:
 
 /usr/include/GL/gl.h:
@@ -332,6 +346,8 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/lib/x86_64-linux-gnu/libGLX.so:
 
+/usr/include/GL/glu.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -342,8 +358,6 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/GL/glext.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/lib/i386-linux-gnu/libmd.so.0:
@@ -351,8 +365,6 @@ CMakeFiles/cal.dir/main.c.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 

@@ -9,6 +9,7 @@ cal: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
   /lib/x86_64-linux-gnu/libm.so.6 \
   /lib/x86_64-linux-gnu/libmvec.so.1 \
+  /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libGLEW.so \
   /usr/lib/x86_64-linux-gnu/libGLX.so \
   /usr/lib/x86_64-linux-gnu/libOpenGL.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
@@ -35,6 +36,9 @@ cal: \
   /usr/lib/i386-linux-gnu/libX11.so.6 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib64/ld-linux-x86-64.so.2 \
+  /lib/i386-linux-gnu/libGL.so.1 \
+  /usr/lib/i386-linux-gnu/libGL.so.1 \
+  /lib/x86_64-linux-gnu/libGL.so.1 \
   /lib/i386-linux-gnu/libGLdispatch.so.0 \
   /usr/lib/i386-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
@@ -73,6 +77,8 @@ CMakeFiles/cal.dir/main.c.o:
 /lib/x86_64-linux-gnu/libm.so.6:
 
 /lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libGLEW.so:
 
 /usr/lib/x86_64-linux-gnu/libGLX.so:
 
@@ -125,6 +131,12 @@ CMakeFiles/cal.dir/main.c.o:
 /lib/x86_64-linux-gnu/libX11.so.6:
 
 /lib64/ld-linux-x86-64.so.2:
+
+/lib/i386-linux-gnu/libGL.so.1:
+
+/usr/lib/i386-linux-gnu/libGL.so.1:
+
+/lib/x86_64-linux-gnu/libGL.so.1:
 
 /lib/i386-linux-gnu/libGLdispatch.so.0:
 

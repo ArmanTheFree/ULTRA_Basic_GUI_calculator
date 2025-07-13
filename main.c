@@ -23,13 +23,19 @@
 #include "nuklear.h"
 #include "nuklear_glfw_gl3.h"
 
-#define WINDOW_WIDTH 1200
+
+#define MAX_VERTEX_BUFFER 512 * 1024
+#define MAX_ELEMENT_BUFFER 128 * 1024
+
+#define WINDOW_WIDTH 600
 #define WINDOW_HEIGHT 800
 
+struct nk_colorf bg;
 
 
 
 int main(void){
+    bg.r = 0.10f, bg.g = 0.18f, bg.b = 0.24f, bg.a = 1.0f;
     if(!glfwInit()){
         fprintf(stderr, "glfw init failed\n");
         exit(1);
@@ -37,6 +43,7 @@ int main(void){
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
     GLFWwindow *wind = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "CAL", NULL, NULL);
     glfwMakeContextCurrent(wind);
@@ -64,13 +71,24 @@ int main(void){
         glfwPollEvents();
         nk_glfw3_new_frame(&glfw);
 
-        if(nk_begin(ctx, "CAL", nk_rect(0,0,100,200),NK_WINDOW_BORDER|NK_WINDOW_MOVABLE|NK_WINDOW_SCALABLE|NK_WINDOW_MINIMIZABLE|NK_WINDOW_TITLE)){
+        if(nk_begin(ctx, "CAL", nk_rect(0,600,600,200),NK_WINDOW_BORDER)){
+
+            nk_layout_row_static(ctx, 30, 600/6-7, 6);
+
+            nk_button_label(ctx, "1");
+            nk_button_label(ctx, "2");
+            nk_button_label(ctx, "3");
+            nk_button_label(ctx, "+");
+            nk_button_label(ctx, "x");
+            nk_button_label(ctx, "%");
 
         }
         nk_end(ctx);
         glClear(GL_COLOR_BUFFER_BIT);
-        nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, 500, 150);
+        nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, 1000000, 100000);
         glfwSwapBuffers(wind);
+        static int frame = 0;
+        //printf("frame: %d\n", ++frame);
     }
     nk_glfw3_shutdown(&glfw);
     glfwTerminate();

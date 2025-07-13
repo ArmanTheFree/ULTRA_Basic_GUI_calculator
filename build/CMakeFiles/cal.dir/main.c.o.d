@@ -73,7 +73,6 @@ CMakeFiles/cal.dir/main.c.o: /home/armanpc/codes/GUIpro/main.c \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /home/armanpc/codes/GUIpro/nuklear.h \
- /home/armanpc/codes/GUIpro/nuklear_glfw_gl3.h /usr/include/GLFW/glfw3.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h
+ /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/include/GLFW/glfw3.h /home/armanpc/codes/GUIpro/nuklear.h \
+ /home/armanpc/codes/GUIpro/nuklear_glfw_gl3.h
