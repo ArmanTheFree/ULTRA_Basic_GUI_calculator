@@ -11,6 +11,7 @@ CMakeFiles/cal.dir/main.c.o
  /usr/include/GLFW/glfw3.h
  /usr/include/alloca.h
  /usr/include/assert.h
+ /usr/include/ctype.h
  /usr/include/endian.h
  /usr/include/features-time64.h
  /usr/include/features.h

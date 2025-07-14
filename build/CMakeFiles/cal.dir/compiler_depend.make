@@ -10,6 +10,7 @@ CMakeFiles/cal.dir/main.c.o: /home/armanpc/codes/GUIpro/main.c \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/assert.h \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
@@ -206,7 +207,9 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+/lib/x86_64-linux-gnu/libX11.so.6:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -218,12 +221,6 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/lib/x86_64-linux-gnu/libmvec.so.1:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/include/features.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/string.h:
@@ -233,6 +230,16 @@ CMakeFiles/cal.dir/main.c.o:
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -268,20 +275,6 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/home/armanpc/codes/GUIpro/main.c:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/features-time64.h:
-
 /home/armanpc/codes/GUIpro/nuklear_glfw_gl3.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
@@ -292,6 +285,22 @@ CMakeFiles/cal.dir/main.c.o:
 
 /home/armanpc/codes/GUIpro/nuklear.h:
 
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/home/armanpc/codes/GUIpro/main.c:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so:
 
 /usr/include/math.h:
@@ -300,19 +309,9 @@ CMakeFiles/cal.dir/main.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+/usr/include/features-time64.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/stdc-predef.h:
+/usr/include/ctype.h:
 
 /usr/lib/x86_64-linux-gnu/libglfw.so.3.3:
 
@@ -337,6 +336,14 @@ CMakeFiles/cal.dir/main.c.o:
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/linux/limits.h:
+
+/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/lib/x86_64-linux-gnu/libOpenGL.so:
 
@@ -407,7 +414,3 @@ CMakeFiles/cal.dir/main.c.o:
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/lib/x86_64-linux-gnu/libX11.so.6:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
