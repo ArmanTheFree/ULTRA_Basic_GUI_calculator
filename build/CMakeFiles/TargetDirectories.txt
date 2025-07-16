@@ -1,3 +1,0 @@
-/home/rtf/codes/GUICalc/build/CMakeFiles/cal.dir
-/home/rtf/codes/GUICalc/build/CMakeFiles/edit_cache.dir
-/home/rtf/codes/GUICalc/build/CMakeFiles/rebuild_cache.dir
