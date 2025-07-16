@@ -58,37 +58,48 @@ void handelInput(string);
 void createOutputFrame(struct nk_context*, float);
 void evaluate();
 
+
+
 int main(void){
+    int viewPortH, viewPortW;
+    int beginY = WINDOW_HEIGHT- WINDOW_HEIGHT/3.0f;
+    const char * windowName = "Basic GUI Calcualtor";
+    GLFWwindow *wind;
+
+    struct nk_context * ctx;
+    struct nk_font_atlas *atlas;
+    struct nk_glfw glfw = {0};
+
     if(!glfwInit()){
         fprintf(stderr, "glfw init failed");
         exit(1);
     }
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);//for static sized window, comment out for resizabality, no functionality is tested with resizable windows
     
-    GLFWwindow *wind = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "CAL", NULL, NULL);
+    wind = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, windowName, NULL, NULL);
     glfwMakeContextCurrent(wind);
 
     if(glewInit() != GLEW_OK){
         fprintf(stderr, "glew init fialed \n");
         exit(1);
     }
-    int wh,ww;
-    glfwGetWindowSize(wind, &ww, &wh);
-    glViewport(0, 0, ww, wh);
-    struct nk_glfw glfw = {0};
-    struct nk_context * ctx = nk_glfw3_init(&glfw, wind, NK_GLFW3_INSTALL_CALLBACKS);
+    glfwGetWindowSize(wind, &viewPortW, &viewPortH);
+    glViewport(0, 0, viewPortW, viewPortH);
+    
+    ctx = nk_glfw3_init(&glfw, wind, NK_GLFW3_INSTALL_CALLBACKS);
+
     glClearColor(0.10f, 0.18f, 0.24f, 1.0f);
     
 
-    struct nk_font_atlas *atlas;
     nk_glfw3_font_stash_begin(&glfw, &atlas);
     nk_glfw3_font_stash_end(&glfw);
     ctx->style.button.hover  = nk_style_item_color(nk_rgb(255/3, 255/3, 255/3)); 
 
-    int beginY = WINDOW_HEIGHT- WINDOW_HEIGHT/3.0f;
+    
 
     while(!glfwWindowShouldClose(wind)){
         glfwPollEvents();
@@ -99,9 +110,13 @@ int main(void){
         glClear(GL_COLOR_BUFFER_BIT);
         nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
         glfwSwapBuffers(wind);
-        static int frame = 0; 
+
     }
+
+    
     nk_glfw3_shutdown(&glfw);
+    nk_glfw3_device_destroy(&glfw);
+    glfwDestroyWindow(wind);
     glfwTerminate();
 
     return 0;
@@ -110,7 +125,7 @@ int main(void){
 
 void createKeys(struct nk_context* ctx, float beginY){
 
-    if(nk_begin(ctx, "CAL", nk_rect(0.0f,beginY-100 ,600.0f, WINDOW_HEIGHT/3.0f+100),NK_WINDOW_NO_SCROLLBAR | NK_WINDOW_BACKGROUND | NK_WINDOW_BORDER)){
+    if(nk_begin(ctx, "Keys", nk_rect(0.0f,beginY-100 ,600.0f, WINDOW_HEIGHT/3.0f+100),NK_WINDOW_NO_SCROLLBAR | NK_WINDOW_BACKGROUND | NK_WINDOW_BORDER)){
 
         nk_layout_row_dynamic(ctx,  (WINDOW_HEIGHT/3.0f)/3.95f , 1);
         if(nk_button_label(ctx, "CLEAR")) inputBuffer.clear();
@@ -146,7 +161,7 @@ void createKeys(struct nk_context* ctx, float beginY){
 
 void createOutputFrame(struct nk_context* ctx, float inputH){
 
-    if(nk_begin(ctx, "inputBuffer", nk_rect(0.0f, 0.0f,WINDOW_WIDTH, inputH-100), NK_WINDOW_BORDER| NK_WINDOW_BACKGROUND|NK_WINDOW_NO_SCROLLBAR)){
+    if(nk_begin(ctx, "input section", nk_rect(0.0f, 0.0f,WINDOW_WIDTH, inputH-100), NK_WINDOW_BORDER| NK_WINDOW_BACKGROUND|NK_WINDOW_NO_SCROLLBAR)){
 
         nk_layout_row_dynamic(ctx, inputH*(1.0f/3.0f)/2.0f, 1);
         nk_label(ctx, historyBuffer.c_str(), NK_TEXT_RIGHT);
