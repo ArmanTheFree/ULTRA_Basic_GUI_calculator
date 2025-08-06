@@ -1,3 +1,0 @@
-/home/armanpc/codes/calc/ULTRA_Basic_GUI_calculator/build/CMakeFiles/u_b_calculator.dir
-/home/armanpc/codes/calc/ULTRA_Basic_GUI_calculator/build/CMakeFiles/edit_cache.dir
-/home/armanpc/codes/calc/ULTRA_Basic_GUI_calculator/build/CMakeFiles/rebuild_cache.dir

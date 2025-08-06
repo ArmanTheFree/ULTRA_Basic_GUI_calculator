@@ -1,8 +1,13 @@
 cmake_minimum_required(VERSION 3.14)
-project(GUICal)
+project(ULTRA_BASIC_CALCULATOR)
 
-find_package(glfw3 3.3 REQUIRED)
-find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
-add_executable(cal main.cpp)
-target_link_libraries(cal OpenGL::GL glfw m GLEW)
+
+if(WIN32)
+    set(EXTRA_LIBS opengl32 glfw3 freeglut)
+elseif(UNIX)
+    set(EXTRA_LIBS GL GLEW glfw)
+endif()
+
+add_executable(u_b_calculator ../main.cpp)
+
+target_link_libraries(u_b_calculator ${EXTRA_LIBS})
